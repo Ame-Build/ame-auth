@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+        background-color: #d4d4d8;
+        padding: 3rem 1rem;
+    }
+
+    .space-y-2 > * + * {
+        margin-top: 0.5rem;
+    }
+</style>
+<body>
+<main style="border-radius: 1rem; background-color: #fafafa; padding: 1rem 2rem;margin: 5rem auto; max-width: 56rem;box-sizing: border-box">
+    <h1>
+        Brand Here
+    </h1>
+    <hr/>
+    <section style="padding: 2rem 0;" class="space-y-2">
+        <p>
+            You're registering an account with us. Click the button below to finish your registration.
+        </p>
+        <p style="margin: 2rem 0; text-align: center;">
+            <a style="padding: 1rem 0.75rem; background-color: #0ea5e9; color: #fafafa; border-radius: 0.5rem; text-decoration: none;"
+               href="{{ register_link }}">
+                Activate Account
+            </a>
+        </p>
+        <p style="font-size: 0.875rem;">
+            This link will expire in 10 minutes and can only be used once. Never share this code with anyone.
+        </p>
+        <p style="font-size: 0.875rem;">
+            Sometimes the button above doesn't work, you can also click the link to activate your account. <a
+                href="{{ register_link }}" style="color: #0ea5e9;"
+        >
+            {{ register_link }}
+        </a>
+        </p>
+    </section>
+    <hr/>
+    <section style="font-size: 0.75rem; color: #52525b;padding: 0.5rem 0;" class="space-y-2">
+        <p>
+            If you don't recognize this activity, please ignore this email. Maybe someone else mistyped their email
+            address.
+        </p>
+        <p>
+            If you have any questions, please contact us at <a style="color: #0ea5e9;"
+                                                               href="mailto:support@example.com">support@example.com</a>.
+        </p>
+    </section>
+
+</main>
+</body>
+</html>
