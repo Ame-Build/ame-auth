@@ -47,12 +47,15 @@ pub struct AuthProviderConfig {
     #[serde(default = "default_log_level")]
     pub log_level: LogLevel,
     pub nats: String,
+    pub postgres: String,
 
-    email_provider: EmailAuthProviderConfig,
+    pub email_provider: EmailAuthProviderConfig,
+    pub jwt_secret: String,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EmailAuthProviderConfig {
+    pub sender: String,
     pub verify_link_base: String,
     #[serde(default = "default_false")]
     pub enable_domain_whitelist: bool,
