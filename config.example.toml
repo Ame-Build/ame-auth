@@ -1,0 +1,8 @@
+log_level = "INFO"
+nats = "nats://localhost:4222"
+postgres = "postgresql://postgres:password@localhost:5432/ame_auth"
+jwt_secret = "secret"
+
+[email_provider]
+sender = "VerifySender"
+verify_link_base = "http://localhost:8080/verify"

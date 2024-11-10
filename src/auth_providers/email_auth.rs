@@ -81,7 +81,7 @@ pub async fn handle_register(
     let auth_key = email_verifying.auth_key;
     let verify_email = RegisterEmail {
         register_link: &format!(
-            "{}{}",
+            "{}/{}",
             state.config.email_provider.verify_link_base, auth_key
         ),
     };

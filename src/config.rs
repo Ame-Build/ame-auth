@@ -59,9 +59,11 @@ pub struct EmailAuthProviderConfig {
     pub verify_link_base: String,
     #[serde(default = "default_false")]
     pub enable_domain_whitelist: bool,
+    #[serde(default = "default_empty_vec")]
     pub domain_whitelist: Vec<String>,
     #[serde(default = "default_true")]
     pub enable_domain_blacklist: bool,
+    #[serde(default = "default_empty_vec")]
     pub domain_blacklist: Vec<String>,
 }
 
@@ -71,4 +73,8 @@ fn default_true() -> bool {
 
 fn default_false() -> bool {
     false
+}
+
+fn default_empty_vec() -> Vec<String> {
+    Vec::new()
 }
