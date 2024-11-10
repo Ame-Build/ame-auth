@@ -41,3 +41,16 @@ impl Model {
         active.insert(db).await
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::Entity;
+    use sea_orm::{DbBackend, Schema};
+
+    #[test]
+    fn create_table_sql() {
+        let db_postgres = DbBackend::Postgres;
+        let schema = Schema::new(db_postgres);
+        let _1 = db_postgres.build(&schema.create_table_from_entity(Entity));
+    }
+}
